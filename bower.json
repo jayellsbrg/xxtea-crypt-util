@@ -1,0 +1,22 @@
+{
+  "name": "xxteacrypt-util",
+  "version": "1.0.0",
+  "description": "xxteacrypt utility",
+  "authors": [
+    "Jordan Seaberg"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "~1.5.5",
+    "angular-material": "~1.1.1"
+  }
+}

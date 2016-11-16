@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-strict-di>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <!--<link rel="icon" href="./images/favicon.png" type="image/png">-->
+    <base href="./">
+
+    <title-placeholder ui-view="title"><title>getTalent xxteacrypt tool</title></title-placeholder>
+
+    <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+    </style>
+
+    <!-- build:css styles/lib.css -->
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+    <!-- endbuild -->
+
+
+    <!-- build:css styles/app.css-->
+
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    <!-- endbuild -->
+</head>
+
+<body>
+
+    <div ng-controller="GtAppController as vm" layout="column" layout-align="center" flex ng-cloak style="max-width: 800px; margin: 20px auto;">
+        <md-content layout-margin layout-padding>
+            <div>
+                <div layout="column" flex>
+                    <md-input-container class="md-block">
+                        <label>Unencrypted</label>
+                        <textarea ng-model="vm.plain" md-select-on-focus></textarea>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Password</label>
+                        <input ng-model="vm.password" type="password">
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>Encrypted</label>
+                        <textarea ng-model="vm.cipher" md-select-on-focus></textarea>
+                    </md-input-container>
+                    <div layout="row" layout-padding>
+                        <md-button class="md-primary md-raised" ng-click="vm.encrypt()">Encrypt</md-button>
+                        <md-button class="md-accent md-raised" ng-click="vm.decrypt()">Decrypt</md-button>
+                    </div>
+                </div>
+            </div>
+        </md-content>
+    </div>
+
+
+    <!-- build:js js/lib.js -->
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script src="./bower_components/angular-messages/angular-messages.js"></script>
+    <script src="./bower_components/angular-material/angular-material.js"></script>
+    <script src="./js/xx-tea-crypt/xx-tea-crypt.module.js"></script>
+    <script src="./js/xx-tea-crypt/base64-encoder.service.js"></script>
+    <script src="./js/xx-tea-crypt/utf8-encoder.service.js"></script>
+    <script src="./js/xx-tea-crypt/xx-tea-crypt.service.js"></script>
+    <script src="./js/app.js"></script>
+    <!-- endbuild -->
+
+    <!-- unbundle-able libs -->
+    <!-- end unbundle-able libs -->
+
+    <!-- build:js js/app.js -->
+
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <!-- inject:react:js -->
+    <!-- endinject -->
+
+    <!-- inject:config:js -->
+    <!-- endinject -->
+
+    <!-- inject:templates:js -->
+    <!-- endinject -->
+
+    <!-- endbuild -->
+</body>
+</html>
